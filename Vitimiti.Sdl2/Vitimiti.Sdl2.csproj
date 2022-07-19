@@ -4,6 +4,20 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DefineTrace>true</DefineTrace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DefineDebug>true</DefineDebug>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DefineDebug>false</DefineDebug>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
 </Project>

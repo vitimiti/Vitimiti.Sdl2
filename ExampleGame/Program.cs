@@ -16,7 +16,7 @@ internal static class Program
             {
                 Debug.WriteLine($"Initialized SDL with flags [{SdlApplication.InitializedSubsystems}]");
 
-                app.RemoveSubsystems(Subsystems.Video);
+                app.StopSubsystems(Subsystems.Video);
                 Debug.WriteLine($"Initialized SDL with flags [{SdlApplication.InitializedSubsystems}]");
 
                 app.AddSubsystems(Subsystems.Video);
@@ -28,10 +28,6 @@ internal static class Program
         catch (SdlException exception)
         {
             Console.Error.WriteLine($"{exception}");
-            throw;
-        }
-        catch
-        {
             throw;
         }
     }

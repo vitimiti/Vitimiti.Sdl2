@@ -5,10 +5,18 @@ using Vitimiti.Sdl2.Utils;
 
 namespace Vitimiti.Sdl2;
 
+/// <summary>The SDL application, necessary for systems management.</summary>
+/// <remarks>
+///     <para>
+///         Any code that requires any of the <see cref="Subsystems" /> to be active will require this
+///         application to be running.
+///     </para>
+///     <para>This is a disposable class and should be used as such.</para>
+/// </remarks>
 public sealed class SdlApplication : IDisposable
 {
-    private bool _disposedValue;
-
+    /// <summary>The SDL version.</summary>
+    /// <value>A <see cref="Version" /> containing the SDL version.</value>
     public static Version SdlVersion
     {
         get
@@ -18,12 +26,26 @@ public sealed class SdlApplication : IDisposable
         }
     }
 
+    /// <summary>The SDL revision.</summary>
+    /// <returns>A <see cref="string" /> containing the SDL revision.</returns>
     public static string Revision => Sdl.GetRevision();
 
+    /// <summary>Deprecated, use <see cref="Revision" /> instead.</summary>
+    /// <returns>Always returns 0.</returns>
     [Obsolete("Use Revision instead.", false)]
     public static int RevisionNumber => Sdl.GetRevisionNumber();
+
+    /// <summary>The <see cref="Subsystems" /> that have been initialized.</summary>
+    /// <returns>
+    ///     An <see cref="Enum" /> flags with the initialized <see cref="Subsystems" />.
+    /// </returns>
     public static Subsystems InitializedSubsystems => Sdl.WasInit(Subsystems.Everything);
 
+    /// <summary>The SDL application constructor.</summary>
+    /// <param name="subsystems">The <see cref="Subsystems" /> to initialize.</param>
+    /// <exception cref="SdlException">
+    ///     When SDL fails to initialize the given <paramref name="subsystems" />.
+    /// </exception>
     public SdlApplication(Subsystems subsystems)
     {
         var errorCode = Sdl.Init(subsystems);
@@ -33,36 +55,38 @@ public sealed class SdlApplication : IDisposable
         }
     }
 
-    private void Dispose(bool disposing)
+    private static void ReleaseUnmanagedResources()
     {
-        if (!_disposedValue)
-        {
-            if (disposing)
-            {
-            }
-
-            Sdl.Quit();
-            _disposedValue = true;
-        }
+        Sdl.Quit();
     }
 
-    ~SdlApplication()
-    {
-        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-        Dispose(disposing: false);
-    }
-
+    /// <summary>Allows the disposal of unmanaged resources.</summary>
     public void Dispose()
     {
-        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-        Dispose(disposing: true);
+        ReleaseUnmanagedResources();
         GC.SuppressFinalize(this);
     }
 
+    /// <summary>The class destructor.</summary>
+    /// <remarks>Use the disposing pattern or <see cref="Dispose" />.</remarks>
+    ~SdlApplication()
+    {
+        ReleaseUnmanagedResources();
+    }
+
+    /// <summary>Add new <see cref="Subsystems" /> after initializing the <see cref="SdlApplication" />.</summary>
+    /// <param name="subsystems">The <see cref="Subsystems"/> to initialize.</param>
+    /// <exception cref="SdlException">
+    ///     When SDL is unable to initialize the given <paramref name="subsystems"/>.
+    /// </exception>
     [SuppressMessage(
         "Performance",
         "CA1822",
-        Justification = "Avoid SDL native leakes by forcing IDisposable class.")]
+        Justification = "Avoid SDL native leaks by forcing IDisposable class.")]
+    [SuppressMessage(
+        "ReSharper",
+        "MemberCanBeMadeStatic.Global",
+        Justification = "Avoid SDL native leaks by forcing IDisposable class.")]
     public void AddSubsystems(Subsystems subsystems)
     {
         var errorCode = Sdl.InitSubsystem(subsystems);
@@ -72,11 +96,20 @@ public sealed class SdlApplication : IDisposable
         }
     }
 
+
+    /// <summary>
+    ///     Stop running <see cref="Subsystems" /> after initializing the <see cref="SdlApplication" />.
+    /// </summary>
+    /// <param name="subsystems">The <see cref="Subsystems"/> to stop.</param>
     [SuppressMessage(
         "Performance",
         "CA1822",
-        Justification = "Avoid SDL native leakes by forcing IDisposable class.")]
-    public void RemoveSubsystems(Subsystems subsystems)
+        Justification = "Avoid SDL native leaks by forcing IDisposable class.")]
+    [SuppressMessage(
+        "ReSharper",
+        "MemberCanBeMadeStatic.Global",
+        Justification = "Avoid SDL native leaks by forcing IDisposable class.")]
+    public void StopSubsystems(Subsystems subsystems)
     {
         Sdl.QuitSubsystem(subsystems);
     }
