@@ -31,6 +31,7 @@ public sealed class SdlApplication : IDisposable
     public static string Revision => Sdl.GetRevision();
 
     /// <summary>Deprecated, use <see cref="Revision" /> instead.</summary>
+    /// <remarks>This used to return a not very reliable revision number from mercurial.</remarks>
     /// <returns>Always returns 0.</returns>
     [Obsolete("Use Revision instead.", false)]
     public static int RevisionNumber => Sdl.GetRevisionNumber();
@@ -95,7 +96,6 @@ public sealed class SdlApplication : IDisposable
             throw new SdlException(Sdl.GetError(), errorCode);
         }
     }
-
 
     /// <summary>
     ///     Stop running <see cref="Subsystems" /> after initializing the <see cref="SdlApplication" />.
