@@ -4,8 +4,24 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <NoWarn>NU5100</NoWarn>
     <DefineTrace>true</DefineTrace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RuntimeIdentifiers>win-x64;win-x86;osx-arm64;osx-x64;linux-x64</RuntimeIdentifiers>
+    <AssemblyVersion>2.0.22</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>2.0.22-alpha-1</PackageVersion>
+    <Title>Vitimiti's C# SDL2</Title>
+    <Authors>Victor Matia</Authors>
+    <Description>Implementation of SDL2 in C# by Vitimiti.</Description>
+    <Copyright>Victor Matia - vmatir@gmail.com</Copyright>
+    <PackageProjectUrl>https://www.libsdl.org/index.php</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vitimiti/Vitimiti.Sdl2</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>SDL2;Interop;Marshaling</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -19,5 +35,16 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="runtime\win-x64\SDL2.dll" Pack="true" PackagePath="runtime\win-x64\SDL2.dll" />
+    <None Include="runtime\win-x86\SDL2.dll" Pack="true" PackagePath="runtime\win-x86\SDL2.dll" />
+    <None Include="runtime\osx-arm64-x64\libSDL2.dylib" Pack="true" PackagePath="runtime\osx-arm64-x64\libSDL2.dylib" />
+    <None Include="runtime\linux-x64\libSDL2.so" Pack="true" PackagePath="runtime\linux-x64\libSDL2.so" />
+    <None Include="targets\RuntimeIdentifiers.targets" Pack="true" PackagePath="targets\RuntimeIdentifiers.targets" />
+    <None Include="..\README.md" Pack="true" PackagePath="docs\README.md" />
+    <None Include="..\LICENSE.md" Pack="true" PackagePath="docs\LICENSE.md" />
+    <None Include="..\CHANGELOG.md" Pack="true" PackagePath="docs\CHANGELOG.md" />
+  </ItemGroup>
 
 </Project>

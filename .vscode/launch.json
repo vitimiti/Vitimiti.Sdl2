@@ -8,9 +8,9 @@
             "name": "Example Game (Debug)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build-linux-x64",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/ExampleGame.dll",
+            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/linux-x64/ExampleGame",
             "args": [],
             "cwd": "${workspaceFolder}/ExampleGame",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

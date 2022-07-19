@@ -10,6 +10,9 @@
 
 ## Configuration
 - [x] Setup Project
+- [x] Publish Configured NuGet Package.
+  - [x] Add Runtime Targets
+  - [x] Add Native Libraries
 
 ## Documenting
-- [ ] Document Init System
+- [x] Document Init System
