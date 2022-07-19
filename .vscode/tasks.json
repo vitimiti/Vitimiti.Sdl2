@@ -2,19 +2,34 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build-linux-x64",
+            "label": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Vitimiti.Sdl2/Vitimiti.Sdl2.csproj",
+                "-c",
+                "Debug",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-linux-x64-debug",
+            "dependsOn": "build-debug",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
                 "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
                 "-c",
                 "Debug",
                 "-r",
                 "linux-x64",
-                "--self-contained"
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },

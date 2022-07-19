@@ -8,7 +8,7 @@
             "name": "Example Game (Debug)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-linux-x64",
+            "preLaunchTask": "build-example-game-linux-x64-debug",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/linux-x64/ExampleGame",
             "args": [],
