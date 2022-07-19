@@ -40,6 +40,7 @@ To recap, if you wish to use the included libraries, which you should do, in an 
     <Nullable>enable</Nullable>
     <DefineTrace>true</DefineTrace>
     <RuntimeIdentifiers>win-x64;win-x86;osx-arm64;osx-x64;linux-x64</RuntimeIdentifiers>
+    <RestoreSources>../vendor;$(RestoreSources);https://api.nuget.org/v3/index.json</RestoreSources>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -57,8 +58,8 @@ To recap, if you wish to use the included libraries, which you should do, in an 
   <ItemGroup>
     <PackageReference Include="Vitimiti.Sdl2" Version="2.0.22-alpha-1" GeneratePathProperty="true" />
   </ItemGroup>
-    
+
   <Import Project="$(PkgVitimiti_Sdl2)\targets\RuntimeIdentifiers.targets" />
-    
+
 </Project>
 ```
