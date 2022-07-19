@@ -7,11 +7,11 @@ namespace Vitimiti.Sdl2;
 
 /// <summary>The SDL application, necessary for systems management.</summary>
 /// <remarks>
-///     <para>
-///         Any code that requires any of the <see cref="Subsystems" /> to be active will require this
-///         application to be running.
-///     </para>
-///     <para>This is a disposable class and should be used as such.</para>
+///   <para>
+///     Any code that requires any of the <see cref="Subsystems" /> to be active will require this
+///     application to be running.
+///   </para>
+///   <para>This is a disposable class and should be used as such.</para>
 /// </remarks>
 public sealed class SdlApplication : IDisposable
 {
@@ -38,14 +38,14 @@ public sealed class SdlApplication : IDisposable
 
     /// <summary>The <see cref="Subsystems" /> that have been initialized.</summary>
     /// <returns>
-    ///     An <see cref="Enum" /> flags with the initialized <see cref="Subsystems" />.
+    ///   An <see cref="Enum" /> flags with the initialized <see cref="Subsystems" />.
     /// </returns>
     public static Subsystems InitializedSubsystems => Sdl.WasInit(Subsystems.Everything);
 
     /// <summary>The SDL application constructor.</summary>
     /// <param name="subsystems">The <see cref="Subsystems" /> to initialize.</param>
     /// <exception cref="SdlException">
-    ///     When SDL fails to initialize the given <paramref name="subsystems" />.
+    ///   When SDL fails to initialize the given <paramref name="subsystems" />.
     /// </exception>
     public SdlApplication(Subsystems subsystems)
     {
@@ -78,7 +78,7 @@ public sealed class SdlApplication : IDisposable
     /// <summary>Add new <see cref="Subsystems" /> after initializing the <see cref="SdlApplication" />.</summary>
     /// <param name="subsystems">The <see cref="Subsystems"/> to initialize.</param>
     /// <exception cref="SdlException">
-    ///     When SDL is unable to initialize the given <paramref name="subsystems"/>.
+    ///   When SDL is unable to initialize the given <paramref name="subsystems"/>.
     /// </exception>
     [SuppressMessage(
         "Performance",
@@ -98,7 +98,8 @@ public sealed class SdlApplication : IDisposable
     }
 
     /// <summary>
-    ///     Stop running <see cref="Subsystems" /> after initializing the <see cref="SdlApplication" />.
+    ///   Stop running <see cref="Subsystems" /> after initializing the
+    ///   <see cref="SdlApplication" />.
     /// </summary>
     /// <param name="subsystems">The <see cref="Subsystems"/> to stop.</param>
     [SuppressMessage(

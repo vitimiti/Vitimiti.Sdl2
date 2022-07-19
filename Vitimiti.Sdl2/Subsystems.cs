@@ -30,7 +30,7 @@ public enum Subsystems : uint
 
     /// <summary>Game controller subsystem.</summary>
     /// <remarks>
-    ///     This subsystem implies the <see cref="Events" /> and <see cref="Joystick" /> subsystems.
+    ///   This subsystem implies the <see cref="Events" /> and <see cref="Joystick" /> subsystems.
     /// </remarks>
     GameController = 0x00002000U,
 
