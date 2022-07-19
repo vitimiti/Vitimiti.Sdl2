@@ -1,29 +1,30 @@
 <Project>
-    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-        <Content Include="$(PkgVitimiti_Sdl2)\runtime\win-x64\SDL2.dll">
-            <Link>SDL2.dll</Link>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+    <Content Include="$(PkgVitimiti_Sdl2)\runtime\win-x64\SDL2.dll">
+      <Link>SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
-    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x86'">
-        <Content Include="$(PkgVitimiti_Sdl2)\runtime\win-x86\SDL2.dll">
-            <Link>SDL2.dll</Link>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x86'">
+    <Content Include="$(PkgVitimiti_Sdl2)\runtime\win-x86\SDL2.dll">
+      <Link>SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
-    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-arm64' Or '$(RuntimeIdentifier)' == 'osx-x64'">
-        <Content Include="$(PkgVitimiti_Sdl2)\runtime\osx-arm64-x64\libSDL2.dylib">
-            <Link>libSDL2.dylib</Link>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+  <ItemGroup
+    Condition="'$(RuntimeIdentifier)' == 'osx-arm64' Or '$(RuntimeIdentifier)' == 'osx-x64'">
+    <Content Include="$(PkgVitimiti_Sdl2)\runtime\osx-arm64-x64\libSDL2.dylib">
+      <Link>libSDL2.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
-    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-        <Content Include="$(PkgVitimiti_Sdl2)\runtime\linux-x64\libSDL2.so">
-            <Link>libSDL2.so</Link>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
+    <Content Include="$(PkgVitimiti_Sdl2)\runtime\linux-x64\libSDL2.so">
+      <Link>libSDL2.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
