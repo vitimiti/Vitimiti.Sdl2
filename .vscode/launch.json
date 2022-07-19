@@ -2,18 +2,112 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": "Example Game (Debug)",
+            "name": "Example Game Win x64 (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-win-x64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/win-x64/ExampleGame.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game Win x86 (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-win-x86-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/win-x86/ExampleGame.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game OSX Arm64 (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-osx-arm64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/osx-arm64/ExampleGame",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game OSX x64 (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-osx-x64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/osx-x64/ExampleGame",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game Linux x64 (Debug)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-example-game-linux-x64-debug",
-            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/ExampleGame/bin/Debug/net6.0/linux-x64/ExampleGame",
             "args": [],
             "cwd": "${workspaceFolder}/ExampleGame",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game Win x64 (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-win-x64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Release/net6.0/win-x64/ExampleGame.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game Win x86 (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-win-x86-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Release/net6.0/win-x86/ExampleGame.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game OSX Arm64 (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-osx-arm64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Release/net6.0/osx-arm64/ExampleGame",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game OSX x64 (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-osx-x64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Release/net6.0/osx-x64/ExampleGame",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Example Game Linux x64 (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-game-linux-x64-debug",
+            "program": "${workspaceFolder}/ExampleGame/bin/Release/net6.0/linux-x64/ExampleGame",
+            "args": [],
+            "cwd": "${workspaceFolder}/ExampleGame",
             "console": "internalConsole",
             "stopAtEntry": false
         },

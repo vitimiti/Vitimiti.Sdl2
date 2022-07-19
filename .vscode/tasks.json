@@ -16,6 +16,92 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Vitimiti.Sdl2/Vitimiti.Sdl2.csproj",
+                "-c",
+                "Release",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-win-x64-debug",
+            "dependsOn": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Debug",
+                "-r",
+                "win-x64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-win-x86-debug",
+            "dependsOn": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Debug",
+                "-r",
+                "win-x86",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-osx-arm64-debug",
+            "dependsOn": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Debug",
+                "-r",
+                "osx-arm64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-osx-x64-debug",
+            "dependsOn": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Debug",
+                "-r",
+                "osx-x64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build-example-game-linux-x64-debug",
             "dependsOn": "build-debug",
             "command": "dotnet",
@@ -25,6 +111,96 @@
                 "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
                 "-c",
                 "Debug",
+                "-r",
+                "linux-x64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-win-x64-release",
+            "dependsOn": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "win-x64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-win-x86-release",
+            "dependsOn": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "win-x86",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-osx-arm64-release",
+            "dependsOn": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "osx-arm64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-osx-x64-release",
+            "dependsOn": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "osx-x64",
+                "--self-contained",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-game-linux-x64-release",
+            "dependsOn": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ExampleGame/ExampleGame.csproj",
+                "-c",
+                "Release",
                 "-r",
                 "linux-x64",
                 "--self-contained",
