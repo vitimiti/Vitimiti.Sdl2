@@ -7,6 +7,8 @@
 - [x] SDL Errors
   - [x] Create C String Marshaling
     - [x] Import SDL's Freeing System
+- [x] Add Clipboard Management
+- [x] Add Platform Name
 
 ## Configuration
 - [x] Setup Project
