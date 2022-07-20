@@ -41,7 +41,7 @@
                 "Debug",
                 "-r",
                 "win-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -59,7 +59,7 @@
                 "Debug",
                 "-r",
                 "win-x86",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -77,7 +77,7 @@
                 "Debug",
                 "-r",
                 "osx-arm64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -95,7 +95,7 @@
                 "Debug",
                 "-r",
                 "osx-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -113,7 +113,7 @@
                 "Debug",
                 "-r",
                 "linux-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -131,7 +131,7 @@
                 "Release",
                 "-r",
                 "win-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -149,7 +149,7 @@
                 "Release",
                 "-r",
                 "win-x86",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -167,7 +167,7 @@
                 "Release",
                 "-r",
                 "osx-arm64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -185,7 +185,7 @@
                 "Release",
                 "-r",
                 "osx-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -203,7 +203,7 @@
                 "Release",
                 "-r",
                 "linux-x64",
-                "--self-contained",
+                "--no-self-contained",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
