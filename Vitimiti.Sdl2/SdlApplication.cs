@@ -15,8 +15,7 @@ namespace Vitimiti.Sdl2;
 /// </remarks>
 public sealed class SdlApplication : IDisposable
 {
-    /// <summary>The SDL version.</summary>
-    /// <value>A <see cref="Version" /> containing the SDL version.</value>
+    /// <summary>Get the SDL version.</summary>
     public static Version SdlVersion
     {
         get
@@ -26,20 +25,17 @@ public sealed class SdlApplication : IDisposable
         }
     }
 
-    /// <summary>The SDL revision.</summary>
-    /// <returns>A <see cref="string" /> containing the SDL revision.</returns>
+    /// <summary>Get the SDL revision.</summary>
     public static string Revision => Sdl.GetRevision();
 
     /// <summary>Deprecated, use <see cref="Revision" /> instead.</summary>
-    /// <remarks>This used to return a not very reliable revision number from mercurial.</remarks>
-    /// <returns>Always returns 0.</returns>
+    /// <remarks>
+    ///   This used to return a not very reliable revision number from mercurial. Now it always returns 0.
+    /// </remarks>
     [Obsolete("Use Revision instead.", false)]
     public static int RevisionNumber => Sdl.GetRevisionNumber();
 
-    /// <summary>The <see cref="Subsystems" /> that have been initialized.</summary>
-    /// <returns>
-    ///   An <see cref="Enum" /> flags with the initialized <see cref="Subsystems" />.
-    /// </returns>
+    /// <summary>Get the <see cref="Subsystems" /> that have been initialized.</summary>
     public static Subsystems InitializedSubsystems => Sdl.WasInit(Subsystems.Everything);
 
     /// <summary>The SDL application constructor.</summary>

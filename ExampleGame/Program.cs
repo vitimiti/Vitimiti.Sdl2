@@ -11,7 +11,7 @@ internal static class Program
     {
         try
         {
-            Console.WriteLine($"Using SDL v{SdlApplication.SdlVersion}[{SdlApplication.Revision}]");
+            Console.WriteLine($"Using SDL v{SdlApplication.SdlVersion} [{SdlApplication.Revision}] on {Platform.Name}.");
             using (var app = new SdlApplication(Subsystems.Everything))
             {
                 Debug.WriteLine($"Initialized SDL with flags [{SdlApplication.InitializedSubsystems}]");
