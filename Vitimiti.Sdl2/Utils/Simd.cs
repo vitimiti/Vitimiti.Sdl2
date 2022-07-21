@@ -25,7 +25,7 @@ public sealed class Simd : IDisposable
         "ReSharper",
         "MemberCanBePrivate.Global",
         Justification = "This is a library, intentional public member.")]
-    public IntPtr UnsafeHandle { get; }
+    public IntPtr UnsafeHandle { get; private set; }
 
     private Simd(IntPtr unsafeHandle)
     {
@@ -83,7 +83,13 @@ public sealed class Simd : IDisposable
 
     private void ReleaseUnmanagedResources()
     {
+        if (UnsafeHandle == IntPtr.Zero)
+        {
+            return;
+        }
+
         Sdl.SimdFree(UnsafeHandle);
+        UnsafeHandle = IntPtr.Zero;
     }
 
     /// <summary>The disposable function.</summary>
