@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vitimiti.Sdl2" Version="2.0.22-alpha-2" GeneratePathProperty="true" />
+    <PackageReference Include="Vitimiti.Sdl2" Version="2.0.22-alpha-3" GeneratePathProperty="true" />
   </ItemGroup>
 
   <Import Project="$(PkgVitimiti_Sdl2)\targets\RuntimeIdentifiers.targets" />

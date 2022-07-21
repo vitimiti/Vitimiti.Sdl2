@@ -12,7 +12,7 @@
     <FileVersion>1.0.0</FileVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageVersion>2.0.22-alpha-2</PackageVersion>
+    <PackageVersion>2.0.22-alpha-3</PackageVersion>
     <Title>Vitimiti's C# SDL2</Title>
     <Authors>Victor Matia</Authors>
     <Description>Implementation of SDL2 in C# by Vitimiti.</Description>
