@@ -1,7 +1,7 @@
 namespace Vitimiti.Sdl2;
 
 /// <summary>The SDL subsystem flags.</summary>
-/// <remarks>These flags can be combined and are used in <see cref="SdlApplication" /></remarks>
+/// <remarks>These flags can be combined and are used in <see cref="SdlApplication" />.</remarks>
 /// <seealso cref="SdlApplication(Subsystems)" />
 /// <seealso cref="SdlApplication.AddSubsystems" />
 /// <seealso cref="SdlApplication.StopSubsystems" />
